@@ -8,21 +8,19 @@
 body {
     font-family: 'Arial', sans-serif;
     background: #f7f7f7;
-    color: #000;
+    color: #000; /* Texto global negro */
     line-height: 1.6;
     overflow-x: hidden;
 }
 
 /* Estilos de la cabecera */
 header {
-    background: #1e90ff;
-    color: #fff;
+    background: #1e90ff; /* Azul claro */
+    color: #fff;  /* Texto blanco en el header */
     padding: 10px 0;
-    position: fixed; /* Cambiado de sticky a fixed */
+    position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul {
@@ -43,7 +41,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #000;
+    color: #000;  /* Hover en negro */
 }
 
 /* Estilo de la sección hero */
@@ -60,22 +58,24 @@ header nav ul li a:hover {
 
 .hero-text {
     z-index: 10;
-    color: #fff; /* Cambiado a blanco para mayor contraste */
+    color: #000;  /* Texto en negro */
 }
 
 .hero-text h2 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #000;  /* Título en negro */
 }
 
 .hero-text p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    color: #000;  /* Párrafo en negro */
 }
 
 .cta-btn {
-    background: #1e90ff;
+    background: #1e90ff; /* Azul claro */
     color: #fff;
     padding: 15px 30px;
     text-transform: uppercase;
@@ -87,7 +87,7 @@ header nav ul li a:hover {
 }
 
 .cta-btn:hover {
-    background: #4682b4;
+    background: #4682b4; /* Azul más oscuro */
 }
 
 /* Sección de servicios */
@@ -143,7 +143,7 @@ form input, form textarea {
 }
 
 form button {
-    background: #1e90ff;
+    background: #1e90ff; /* Azul claro */
     color: #fff;
     padding: 15px 30px;
     font-size: 1rem;
@@ -154,7 +154,7 @@ form button {
 }
 
 form button:hover {
-    background: #4682b4;
+    background: #4682b4; /* Azul más oscuro */
 }
 
 /* Estilos del footer */
@@ -168,7 +168,7 @@ footer {
 /* Estilos para el botón de WhatsApp */
 .whatsapp-btn {
     display: inline-block;
-    background-color: #25D366;
+    background-color: #25D366; /* Verde WhatsApp */
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
@@ -179,5 +179,5 @@ footer {
 }
 
 .whatsapp-btn:hover {
-    background-color: #128C7E;
+    background-color: #128C7E; /* Verde más oscuro de WhatsApp */
 }
