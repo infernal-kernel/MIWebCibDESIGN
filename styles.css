@@ -9,7 +9,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background: #eaf7ff;  /* Fondo azul suave */
-    color: #333;  /* Texto gris oscuro para mayor legibilidad */
+    color: #fff;  /* Texto gris oscuro para mayor legibilidad */
     line-height: 1.6;
     overflow-x: hidden;
 }
