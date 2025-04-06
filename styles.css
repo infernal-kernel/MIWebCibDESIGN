@@ -16,7 +16,7 @@ body {
 /* Estilos de la cabecera */
 header {
     background: #000;
-    color: #fff;  /* Texto en blanco dentro del header */
+    color: #000;  /* Texto en blanco dentro del header */
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -34,7 +34,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;  /* Enlaces blancos */
+    color: #000;  /* Enlaces blancos */
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
