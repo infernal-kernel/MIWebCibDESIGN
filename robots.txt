@@ -1,0 +1,13 @@
+# Robots.txt para SecureDesigns S.RTech
+
+# Permitir acceso a todos los motores de búsqueda
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+
+# Permitir rastrear todas las demás páginas
+Allow: /
+
+# Sitemap
+Sitemap: https://infernal-kernel.github.io/MIWebCibDESIGN/sitemap.xml
