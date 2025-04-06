@@ -22,7 +22,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añadido sombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul {
@@ -60,19 +60,18 @@ header nav ul li a:hover {
 
 .hero-text {
     z-index: 10;
+    color: #fff; /* Cambiado a blanco para mayor contraste */
 }
 
 .hero-text h2 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #fff; /* Cambiado a blanco para asegurar contraste */
 }
 
 .hero-text p {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    color: #fff; /* Cambiado a blanco para asegurar contraste */
 }
 
 .cta-btn {
@@ -181,22 +180,4 @@ footer {
 
 .whatsapp-btn:hover {
     background-color: #128C7E;
-}
-
-/* Modo oscuro */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #eee;
-  }
-  .servicio {
-    background: #1f1f1f;
-    color: #fff;
-  }
-  header, footer {
-    background: #000;
-  }
-  a {
-    color: #1e90ff;
-  }
 }
