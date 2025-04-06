@@ -5,20 +5,19 @@
     box-sizing: border-box;
 }
 
-/* Configuración general del body */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Fondo sutil */
-    color: #000;  /* Texto global negro */
+    background: #f7f7f7;
+    color: #000; /* Texto global negro */
     line-height: 1.6;
     overflow-x: hidden;
 }
 
 /* Estilos de la cabecera */
 header {
-    background: #2C3E50;  /* Azul oscuro representando la seguridad */
-    color: #fff;  /* Texto blanco dentro del header */
-    padding: 20px 0;
+    background: #1e90ff; /* Azul claro */
+    color: #fff;  /* Texto blanco en el header */
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -35,19 +34,19 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;  /* Enlaces blancos */
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #3498DB;  /* Azul claro en hover */
+    color: #000;  /* Hover en negro */
 }
 
-/* Sección hero con fondo */
+/* Estilo de la sección hero */
 #inicio {
-    background: url('https://via.placeholder.com/1500x700?text=Security+Background') no-repeat center center/cover; /* Fondo representativo de seguridad */
+    background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -57,19 +56,26 @@ header nav ul li a:hover {
     position: relative;
 }
 
+.hero-text {
+    z-index: 10;
+    color: #000;  /* Texto en negro */
+}
+
 .hero-text h2 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #000;  /* Título en negro */
 }
 
 .hero-text p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    color: #000;  /* Párrafo en negro */
 }
 
 .cta-btn {
-    background: #3498DB; /* Azul claro */
+    background: #1e90ff; /* Azul claro */
     color: #fff;
     padding: 15px 30px;
     text-transform: uppercase;
@@ -81,7 +87,7 @@ header nav ul li a:hover {
 }
 
 .cta-btn:hover {
-    background: #2980B9; /* Azul oscuro en hover */
+    background: #4682b4; /* Azul más oscuro */
 }
 
 /* Sección de servicios */
@@ -137,7 +143,7 @@ form input, form textarea {
 }
 
 form button {
-    background: #3498DB;
+    background: #1e90ff; /* Azul claro */
     color: #fff;
     padding: 15px 30px;
     font-size: 1rem;
@@ -148,12 +154,12 @@ form button {
 }
 
 form button:hover {
-    background: #2980B9;
+    background: #4682b4; /* Azul más oscuro */
 }
 
 /* Estilos del footer */
 footer {
-    background: #2C3E50;
+    background: #333;
     color: #fff;
     text-align: center;
     padding: 20px;
