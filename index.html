@@ -1,201 +1,80 @@
-/* Resetear márgenes y paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creación de páginas web rápidas, seguras y profesionales.">
+    <title>¡Crea tu Página Web! | SecureDesigns S.RTech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>SecureDesigns S.RTech</h1>
+            </div>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#por-que">¿Por qué elegirnos?</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: #f7f7f7;
-    color: #000; /* Texto global negro */
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+    <section id="inicio">
+        <div class="hero-text">
+            <h2>🚀 ¡Lanzamos un nuevo servicio! 🚀</h2>
+            <p>¿Necesitas una página web rápida, segura y profesional? 💻🔐 ¡Estás en el lugar correcto!</p>
+            <a href="#contacto" class="cta-btn">¡Empecemos ahora!</a>
+        </div>
+    </section>
 
-/* Estilos de la cabecera */
-header {
-    background: #1e90ff; /* Azul claro */
-    color: #fff;  /* Texto blanco en el header */
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    <section id="servicios" class="section">
+        <h2>🔧 ¿Cómo funciona?</h2>
+        <div class="servicios-container">
+            <div class="servicio">
+                <h3>Diseño rápido</h3>
+                <p>Envíanos las fotos y la información que quieres incluir, nosotros nos encargamos del diseño.</p>
+            </div>
+            <div class="servicio">
+                <h3>Seguridad</h3>
+                <p>Protegemos tu web con las mejores prácticas para garantizar tu tranquilidad.</p>
+            </div>
+            <div class="servicio">
+                <h3>Costo accesible</h3>
+                <p>Precios claros, sin sorpresas. Lo que necesitas sin complicaciones.</p>
+            </div>
+        </div>
+    </section>
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
+    <section id="por-que" class="section">
+        <h2>🔑 ¿Por qué elegirnos?</h2>
+        <ul>
+            <li>Páginas web optimizadas para la seguridad.</li>
+            <li>Diseño responsive, se ve bien en cualquier dispositivo.</li>
+            <li>¡Entrega rápida! 🚀</li>
+        </ul>
+    </section>
 
-header nav ul li {
-    margin: 0 15px;
-}
+    <section id="precios" class="section">
+        <h2>💰 Precios</h2>
+        <p>Para una página básica con tu información y fotos, el precio inicial es de [150-200]. ¡Contáctanos para más detalles!</p>
+    </section>
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
+    <section id="contacto" class="section">
+        <h2>📝 ¿Listo para crear tu página web?</h2>
+        <form action="mailto:samuelromerocloud18@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+            <button type="submit" class="cta-btn">Enviar mensaje</button>
+        </form>
+        <a href="https://wa.me/34641188232" target="_blank" class="whatsapp-btn">Contáctame por WhatsApp</a>
+    </section>
 
-header nav ul li a:hover {
-    color: #000;  /* Hover en negro */
-}
+    <footer>
+        <p>&copy; 2025-26 S.RTech. Todos los derechos reservados por SecureDesigns S.RTech.</p>
+    </footer>
 
-/* Estilo de la sección hero */
-#inicio {
-    background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    position: relative;
-}
-
-.hero-text {
-    z-index: 10;
-    color: #000;  /* Texto en negro */
-}
-
-.hero-text h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #000;  /* Título en negro */
-}
-
-.hero-text p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: #000;  /* Párrafo en negro */
-}
-
-.cta-btn {
-    background: #1e90ff; /* Azul claro */
-    color: #fff;
-    padding: 15px 30px;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-    background: #4682b4; /* Azul más oscuro */
-}
-
-/* Sección de servicios */
-.section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.servicios-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.servicio {
-    width: 30%;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.servicio:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.servicio h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.servicio p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Sección de contacto */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-form input, form textarea {
-    width: 80%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form button {
-    background: #1e90ff; /* Azul claro */
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-form button:hover {
-    background: #4682b4; /* Azul más oscuro */
-}
-
-/* Estilos del footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Estilos para el botón de WhatsApp */
-.whatsapp-btn {
-    display: inline-block;
-    background-color: #25D366; /* Verde WhatsApp */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.whatsapp-btn:hover {
-    background-color: #128C7E; /* Verde más oscuro de WhatsApp */
-}
-
-/* Modo oscuro */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #eee;
-  }
-  .servicio {
-    background: #1f1f1f;
-    color: #fff;
-  }
-  header, footer {
-    background: #000;
-  }
-  a {
-    color: #1e90ff;
-  }
-}
+</body>
+</html>
