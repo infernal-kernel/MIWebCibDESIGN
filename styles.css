@@ -5,19 +5,20 @@
     box-sizing: border-box;
 }
 
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background: #f0f8ff; /* Fondo azul claro */
-    color: #333;  /* Texto global en color oscuro */
+    background: #f4faff;  /* Fondo azul claro */
+    color: #1a1a1a;  /* Color de texto oscuro */
     line-height: 1.6;
     overflow-x: hidden;
 }
 
 /* Estilos de la cabecera */
 header {
-    background: #003366; /* Fondo azul oscuro */
-    color: #fff;  /* Texto en blanco dentro del header */
-    padding: 10px 0;
+    background: #003366; /* Azul oscuro */
+    color: #fff;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -34,14 +35,14 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;  /* Enlaces blancos */
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #1e90ff;  /* Enlaces azules en hover */
+    color: #66ccff; /* Azul claro en hover */
 }
 
 /* Estilo de la sección hero */
@@ -51,7 +52,7 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;  /* Texto blanco en la hero */
+    color: #fff;
     text-align: center;
     position: relative;
 }
@@ -61,21 +62,21 @@ header nav ul li a:hover {
 }
 
 .hero-text h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #fff;  /* Asegura que el título sea blanco */
+    color: #fff;
 }
 
 .hero-text p {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    color: #fff;  /* Asegura que el párrafo sea blanco */
+    color: #fff;
 }
 
 .cta-btn {
-    background: #1e90ff; /* Botón azul */
-    color: #fff;
+    background: #66ccff; /* Azul claro */
+    color: #003366;  /* Azul oscuro */
     padding: 15px 30px;
     text-transform: uppercase;
     border: none;
@@ -86,25 +87,25 @@ header nav ul li a:hover {
 }
 
 .cta-btn:hover {
-    background: #4682b4; /* Azul más oscuro en hover */
+    background: #3399ff; /* Azul más intenso */
 }
 
 /* Sección de servicios */
 .section {
     padding: 50px 20px;
     text-align: center;
+    background: #fff;  /* Fondo blanco */
 }
 
 .servicios-container {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
-    gap: 20px;
 }
 
 .servicio {
     width: 30%;
-    background: #fff;
+    background: #f7f7f7;  /* Fondo gris claro */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -119,12 +120,11 @@ header nav ul li a:hover {
 .servicio h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #003366;  /* Títulos de servicios en azul oscuro */
 }
 
 .servicio p {
     font-size: 1rem;
-    color: #666;  /* Texto gris oscuro para los párrafos */
+    color: #333;
 }
 
 /* Sección de contacto */
@@ -144,8 +144,8 @@ form input, form textarea {
 }
 
 form button {
-    background: #1e90ff; /* Botón azul */
-    color: #fff;
+    background: #66ccff;
+    color: #003366;
     padding: 15px 30px;
     font-size: 1rem;
     border: none;
@@ -155,12 +155,12 @@ form button {
 }
 
 form button:hover {
-    background: #4682b4; /* Azul más oscuro en hover */
+    background: #3399ff;
 }
 
 /* Estilos del footer */
 footer {
-    background: #003366; /* Fondo azul oscuro */
+    background: #003366;
     color: #fff;
     text-align: center;
     padding: 20px;
