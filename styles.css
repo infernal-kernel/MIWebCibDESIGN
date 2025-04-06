@@ -5,9 +5,10 @@
     box-sizing: border-box;
 }
 
+/* Configuración general del body */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Fondo de textura sutil */
+    background: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Fondo sutil */
     color: #000;  /* Texto global negro */
     line-height: 1.6;
     overflow-x: hidden;
@@ -16,7 +17,7 @@ body {
 /* Estilos de la cabecera */
 header {
     background: #2C3E50;  /* Azul oscuro representando la seguridad */
-    color: #fff;  /* Texto en blanco dentro del header */
+    color: #fff;  /* Texto blanco dentro del header */
     padding: 20px 0;
     position: sticky;
     top: 0;
@@ -44,14 +45,14 @@ header nav ul li a:hover {
     color: #3498DB;  /* Azul claro en hover */
 }
 
-/* Estilo de la sección hero */
+/* Sección hero con fondo */
 #inicio {
-    background: url('https://via.placeholder.com/1500x700?text=Security+Background') no-repeat center center/cover; /* Fondo de seguridad */
+    background: url('https://via.placeholder.com/1500x700?text=Security+Background') no-repeat center center/cover; /* Fondo representativo de seguridad */
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;  /* Texto blanco en la hero */
+    color: #fff;
     text-align: center;
     position: relative;
 }
@@ -97,7 +98,7 @@ header nav ul li a:hover {
 
 .servicio {
     width: 30%;
-    background: #fff;  /* Fondo blanco para los servicios */
+    background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -116,7 +117,7 @@ header nav ul li a:hover {
 
 .servicio p {
     font-size: 1rem;
-    color: #555;  /* Color gris para el texto de los servicios */
+    color: #555;
 }
 
 /* Sección de contacto */
@@ -136,7 +137,7 @@ form input, form textarea {
 }
 
 form button {
-    background: #3498DB; /* Azul claro */
+    background: #3498DB;
     color: #fff;
     padding: 15px 30px;
     font-size: 1rem;
@@ -147,12 +148,12 @@ form button {
 }
 
 form button:hover {
-    background: #2980B9; /* Azul oscuro en hover */
+    background: #2980B9;
 }
 
 /* Estilos del footer */
 footer {
-    background: #2C3E50; /* Azul oscuro */
+    background: #2C3E50;
     color: #fff;
     text-align: center;
     padding: 20px;
