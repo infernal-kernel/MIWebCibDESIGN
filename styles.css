@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background: #f7f7f7;
-    color: #000;
+    color: #000;  /* Texto global negro */
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -16,7 +16,7 @@ body {
 /* Estilos de la cabecera */
 header {
     background: #000;
-    color: #000;
+    color: #fff;  /* Texto en blanco dentro del header */
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -34,14 +34,14 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #fff;  /* Enlaces blancos */
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #f39c12;
+    color: #f39c12;  /* Color de enlace en hover */
 }
 
 /* Estilo de la sección hero */
@@ -51,7 +51,7 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #fff;  /* Texto blanco en la hero */
     text-align: center;
     position: relative;
 }
@@ -64,11 +64,13 @@ header nav ul li a:hover {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #fff;  /* Asegura que el título sea blanco */
 }
 
 .hero-text p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    color: #fff;  /* Asegura que el párrafo sea blanco */
 }
 
 .cta-btn {
@@ -120,7 +122,7 @@ header nav ul li a:hover {
 
 .servicio p {
     font-size: 1rem;
-    color: #555;
+    color: #555;  /* Color gris para el texto de los servicios */
 }
 
 /* Sección de contacto */
