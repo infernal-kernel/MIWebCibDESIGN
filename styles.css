@@ -1,17 +1,26 @@
-/* Body general */
-body {
-    background: url('https://images.unsplash.com/photo-1517677207942-d0c9d78e99a5?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNzg5OXwwfDF8c2VhcmNofDJ8fGJsdWV8ZW58MHx8fHwxNjgyNzU1MTU2&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
-    background-size: cover;  /* Fondo cubre toda la pantalla */
-    color: #000; /* Texto negro */
-    font-family: Arial, sans-serif;
+/* Resetear márgenes y paddings */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Fondo de textura sutil */
+    color: #000;  /* Texto global negro */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Estilos de la cabecera */
 header {
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
-    color: #fff;
-    padding: 10px 0;
+    background: #2C3E50;  /* Azul oscuro representando la seguridad */
+    color: #fff;  /* Texto en blanco dentro del header */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header nav ul {
@@ -25,49 +34,125 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #fff;  /* Enlaces blancos */
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #f39c12;
+    color: #3498DB;  /* Azul claro en hover */
 }
 
-.hero-text {
-    z-index: 10;
+/* Estilo de la sección hero */
+#inicio {
+    background: url('https://via.placeholder.com/1500x700?text=Security+Background') no-repeat center center/cover; /* Fondo de seguridad */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;  /* Texto blanco en la hero */
     text-align: center;
-    margin-top: 20vh;
+    position: relative;
 }
 
 .hero-text h2 {
     font-size: 3rem;
     font-weight: bold;
-    color: white;
+    margin-bottom: 20px;
 }
 
 .hero-text p {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    color: white;
 }
 
 .cta-btn {
-    background: #f39c12;
+    background: #3498DB; /* Azul claro */
     color: #fff;
     padding: 15px 30px;
     text-transform: uppercase;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
-    background: #e67e22;
+    background: #2980B9; /* Azul oscuro en hover */
 }
 
+/* Sección de servicios */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.servicios-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.servicio {
+    width: 30%;
+    background: #fff;  /* Fondo blanco para los servicios */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.servicio h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 1rem;
+    color: #555;  /* Color gris para el texto de los servicios */
+}
+
+/* Sección de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background: #3498DB; /* Azul claro */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #2980B9; /* Azul oscuro en hover */
+}
+
+/* Estilos del footer */
 footer {
-    background: #333;
+    background: #2C3E50; /* Azul oscuro */
     color: #fff;
     text-align: center;
     padding: 20px;
