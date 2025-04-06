@@ -8,19 +8,21 @@
 body {
     font-family: 'Arial', sans-serif;
     background: #f7f7f7;
-    color: #000; /* Texto global negro */
+    color: #000;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
 /* Estilos de la cabecera */
 header {
-    background: #1e90ff; /* Azul claro */
-    color: #fff;  /* Texto blanco en el header */
+    background: #1e90ff;
+    color: #fff;
     padding: 10px 0;
-    position: sticky;
+    position: fixed; /* Cambiado de sticky a fixed */
     top: 0;
+    width: 100%;
     z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añadido sombra */
 }
 
 header nav ul {
@@ -41,7 +43,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #000;  /* Hover en negro */
+    color: #000;
 }
 
 /* Estilo de la sección hero */
@@ -58,24 +60,23 @@ header nav ul li a:hover {
 
 .hero-text {
     z-index: 10;
-    color: #000;  /* Texto en negro */
 }
 
 .hero-text h2 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #000;  /* Título en negro */
+    color: #fff; /* Cambiado a blanco para asegurar contraste */
 }
 
 .hero-text p {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    color: #000;  /* Párrafo en negro */
+    color: #fff; /* Cambiado a blanco para asegurar contraste */
 }
 
 .cta-btn {
-    background: #1e90ff; /* Azul claro */
+    background: #1e90ff;
     color: #fff;
     padding: 15px 30px;
     text-transform: uppercase;
@@ -87,7 +88,7 @@ header nav ul li a:hover {
 }
 
 .cta-btn:hover {
-    background: #4682b4; /* Azul más oscuro */
+    background: #4682b4;
 }
 
 /* Sección de servicios */
@@ -143,7 +144,7 @@ form input, form textarea {
 }
 
 form button {
-    background: #1e90ff; /* Azul claro */
+    background: #1e90ff;
     color: #fff;
     padding: 15px 30px;
     font-size: 1rem;
@@ -154,7 +155,7 @@ form button {
 }
 
 form button:hover {
-    background: #4682b4; /* Azul más oscuro */
+    background: #4682b4;
 }
 
 /* Estilos del footer */
@@ -168,7 +169,7 @@ footer {
 /* Estilos para el botón de WhatsApp */
 .whatsapp-btn {
     display: inline-block;
-    background-color: #25D366; /* Verde WhatsApp */
+    background-color: #25D366;
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
@@ -179,5 +180,23 @@ footer {
 }
 
 .whatsapp-btn:hover {
-    background-color: #128C7E; /* Verde más oscuro de WhatsApp */
+    background-color: #128C7E;
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #eee;
+  }
+  .servicio {
+    background: #1f1f1f;
+    color: #fff;
+  }
+  header, footer {
+    background: #000;
+  }
+  a {
+    color: #1e90ff;
+  }
 }
