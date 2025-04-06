@@ -1,13 +1,34 @@
 # Robots.txt para SecureDesigns S.RTech
 
-# Permitir acceso a todos los motores de búsqueda
+# Permitir que todos los bots rastreen el sitio (esto es útil si no quieres restringir el acceso)
 User-agent: *
-Disallow: /admin/
-Disallow: /login/
-Disallow: /private/
+Disallow: /private/        # No permitir acceso a la carpeta /private/
+Disallow: /admin/          # No permitir acceso a la carpeta de administración
+Disallow: /login/          # No permitir acceso al formulario de login
+Disallow: /checkout/       # No permitir acceso a la página de pago
 
-# Permitir rastrear todas las demás páginas
+# Permitir que los bots rastreen todas las páginas del sitio
 Allow: /
 
-# Sitemap
+# Deshabilitar rastreo de ciertos recursos
+Disallow: /images/         # No rastrear imágenes (si no son relevantes para SEO)
+Disallow: /scripts/        # No rastrear scripts de backend o JS innecesarios
+Disallow: /styles/         # No rastrear archivos de estilos innecesarios
+
+# Excluir ciertas páginas de la indexación
+Disallow: /thank-you-page/ # Página de agradecimiento, no es necesario indexarla
+
+# Asegurar que las páginas de búsqueda interna no se indexen
+Disallow: /search
+
+# Permitir que Googlebot pueda rastrear todo, pero excluye algunas páginas
+User-agent: Googlebot
+Disallow: /no-google/
+
+# Incluir el archivo Sitemap (para ayudar a los motores de búsqueda a encontrar todas las URLs de tu sitio)
 Sitemap: https://infernal-kernel.github.io/MIWebCibDESIGN/sitemap.xml
+
+# Informar sobre las políticas de privacidad y contenido
+# No indexar ciertas áreas de tu sitio, si así lo prefieres
+Disallow: /privacy-policy/
+Disallow: /terms-of-service/
