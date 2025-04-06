@@ -6,6 +6,16 @@
     <meta name="description" content="Creación de páginas web rápidas, seguras y profesionales.">
     <title>¡Crea tu Página Web! | SecureDesigns S.RTech</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- AOS Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="¡Crea tu Página Web con SecureDesigns S.RTech!">
+    <meta property="og:description" content="Diseñamos páginas web rápidas, seguras y profesionales.">
+    <meta property="og:image" content="https://via.placeholder.com/1500">
+    <meta property="og:url" content="https://tudominio.com">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
     <header>
@@ -32,15 +42,15 @@
     <section id="servicios" class="section">
         <h2>🔧 ¿Cómo funciona?</h2>
         <div class="servicios-container">
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-up" data-aos-delay="100">
                 <h3>Diseño rápido</h3>
                 <p>Envíanos las fotos y la información que quieres incluir, nosotros nos encargamos del diseño.</p>
             </div>
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-up" data-aos-delay="200">
                 <h3>Seguridad</h3>
                 <p>Protegemos tu web con las mejores prácticas para garantizar tu tranquilidad.</p>
             </div>
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-up" data-aos-delay="300">
                 <h3>Costo accesible</h3>
                 <p>Precios claros, sin sorpresas. Lo que necesitas sin complicaciones.</p>
             </div>
@@ -75,6 +85,64 @@
     <footer>
         <p>&copy; 2025-26 S.RTech. Todos los derechos reservados por SecureDesigns S.RTech.</p>
     </footer>
+
+    <!-- AOS Animations Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Script de texto máquina de escribir -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const frases = [
+            "¿Necesitas una web profesional?",
+            "¿Quieres vender más con estilo?",
+            "¡Nosotros te la creamos! 💻"
+        ];
+        let i = 0, j = 0, fraseActual = [], eliminando = false;
+
+        const elemento = document.querySelector(".hero-text h2");
+
+        function escribir() {
+            elemento.innerHTML = "🚀 " + fraseActual.join("") + " 🚀";
+
+            if (!eliminando && j < frases[i].length) {
+                fraseActual.push(frases[i][j++]);
+            } else if (eliminando && j > 0) {
+                fraseActual.pop();
+                j--;
+            }
+
+            if (j === frases[i].length && !eliminando) {
+                eliminando = true;
+                setTimeout(escribir, 1500);
+                return;
+            }
+
+            if (eliminando && j === 0) {
+                eliminando = false;
+                i = (i + 1) % frases.length;
+            }
+
+            setTimeout(escribir, eliminando ? 50 : 100);
+        }
+
+        escribir();
+    });
+    </script>
+
+    <!-- Scroll suave -->
+    <script>
+    document.querySelectorAll('a[href^="#"]').forEach(ancla => {
+        ancla.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    </script>
 
 </body>
 </html>
