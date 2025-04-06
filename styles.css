@@ -1,11 +1,15 @@
+/* Body general */
 body {
-    background: linear-gradient(to right, #00416A, #00A8E8); /* De azul oscuro a azul claro */
-    color: #000;  /* Texto negro */
+    background: url('https://images.unsplash.com/photo-1517677207942-d0c9d78e99a5?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNzg5OXwwfDF8c2VhcmNofDJ8fGJsdWV8ZW58MHx8fHwxNjgyNzU1MTU2&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+    background-size: cover;  /* Fondo cubre toda la pantalla */
+    color: #000; /* Texto negro */
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #00416A;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
     color: #fff;
     padding: 10px 0;
 }
@@ -56,6 +60,10 @@ header nav ul li a:hover {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+}
+
+.cta-btn:hover {
+    background: #e67e22;
 }
 
 footer {
