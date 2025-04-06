@@ -7,15 +7,15 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: #f7f7f7;
-    color: #333;  /* Texto global más suave */
+    background: #f0f8ff; /* Fondo azul claro */
+    color: #333;  /* Texto global en color oscuro */
     line-height: 1.6;
     overflow-x: hidden;
 }
 
 /* Estilos de la cabecera */
 header {
-    background: #333;
+    background: #003366; /* Fondo azul oscuro */
     color: #fff;  /* Texto en blanco dentro del header */
     padding: 10px 0;
     position: sticky;
@@ -41,7 +41,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #f39c12;  /* Color de enlace en hover */
+    color: #1e90ff;  /* Enlaces azules en hover */
 }
 
 /* Estilo de la sección hero */
@@ -74,8 +74,8 @@ header nav ul li a:hover {
 }
 
 .cta-btn {
-    background: #f39c12;
-    color: #000;
+    background: #1e90ff; /* Botón azul */
+    color: #fff;
     padding: 15px 30px;
     text-transform: uppercase;
     border: none;
@@ -86,7 +86,7 @@ header nav ul li a:hover {
 }
 
 .cta-btn:hover {
-    background: #e67e22;
+    background: #4682b4; /* Azul más oscuro en hover */
 }
 
 /* Sección de servicios */
@@ -119,12 +119,12 @@ header nav ul li a:hover {
 .servicio h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #333;  /* Títulos de servicios en negro */
+    color: #003366;  /* Títulos de servicios en azul oscuro */
 }
 
 .servicio p {
     font-size: 1rem;
-    color: #555;  /* Color gris para el texto de los servicios */
+    color: #666;  /* Texto gris oscuro para los párrafos */
 }
 
 /* Sección de contacto */
@@ -144,7 +144,7 @@ form input, form textarea {
 }
 
 form button {
-    background: #f39c12;
+    background: #1e90ff; /* Botón azul */
     color: #fff;
     padding: 15px 30px;
     font-size: 1rem;
@@ -155,12 +155,12 @@ form button {
 }
 
 form button:hover {
-    background: #e67e22;
+    background: #4682b4; /* Azul más oscuro en hover */
 }
 
 /* Estilos del footer */
 footer {
-    background: #333;
+    background: #003366; /* Fondo azul oscuro */
     color: #fff;
     text-align: center;
     padding: 20px;
