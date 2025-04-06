@@ -164,3 +164,20 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* Verde más oscuro de WhatsApp */
+}
