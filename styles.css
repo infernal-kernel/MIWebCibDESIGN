@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: #f7f7f7;
+    background: url('https://via.placeholder.com/1500') no-repeat center center/cover; /* Cambia la URL aquí */
     color: #000; /* Texto global negro */
     line-height: 1.6;
     overflow-x: hidden;
@@ -90,37 +90,71 @@ header nav ul li a:hover {
     background: #4682b4; /* Azul más oscuro */
 }
 
-/* Estilos para las noticias */
-#noticias {
+/* Sección de servicios */
+.section {
     padding: 50px 20px;
-    background: #fff;
-    border-top: 3px solid #1e90ff;
+    text-align: center;
 }
 
-#news-container {
+.servicios-container {
+    display: flex;
+    justify-content: space-around;
     margin-top: 20px;
 }
 
-.news-item {
-    background: #f1f1f1;
-    padding: 15px;
-    margin-bottom: 15px;
+.servicio {
+    width: 30%;
+    background: #fff;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.like-btn {
-    background: #1e90ff;
-    color: white;
+.servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.servicio h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Sección de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background: #1e90ff; /* Azul claro */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1rem;
     border: none;
-    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.like-btn:hover {
-    background: #4682b4;
+form button:hover {
+    background: #4682b4; /* Azul más oscuro */
 }
 
 /* Estilos del footer */
@@ -146,4 +180,47 @@ footer {
 
 .whatsapp-btn:hover {
     background-color: #128C7E; /* Verde más oscuro de WhatsApp */
+}
+
+/* Media Query para móviles */
+@media only screen and (max-width: 768px) {
+    /* Ajustar texto en el header */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Ajustar la sección Hero */
+    #inicio .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    #inicio .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustar la sección de Servicios */
+    .servicios-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicio {
+        width: 80%; /* Reducir el tamaño de los bloques */
+        margin-bottom: 20px; /* Separar los servicios */
+    }
+
+    /* Ajuste en el formulario de contacto */
+    form input, form textarea {
+        width: 90%;
+    }
+
+    /* Ajustar el botón de WhatsApp */
+    .whatsapp-btn {
+        font-size: 14px;
+    }
 }
