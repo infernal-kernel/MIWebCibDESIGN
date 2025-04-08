@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Creación de páginas web rápidas, seguras y profesionales.">
     <title>¡Crea tu Página Web! | SecureDesigns S.RTech</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que el archivo 'styles.css' esté en la misma carpeta -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -17,6 +17,7 @@
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#por-que">¿Por qué elegirnos?</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#noticias">Noticias</a></li>
             </ul>
         </nav>
     </header>
@@ -27,6 +28,18 @@
             <p>¿Necesitas una página web rápida, segura y profesional? 💻🔐 ¡Estás en el lugar correcto!</p>
             <a href="#contacto" class="cta-btn">¡Empecemos ahora!</a>
         </div>
+    </section>
+
+    <!-- Nueva sección de noticias -->
+    <section id="noticias" class="section">
+        <h2>📰 Noticias</h2>
+        <div id="news-container">
+            <!-- Noticias se agregarán aquí -->
+        </div>
+        <form id="news-form" action="javascript:void(0)">
+            <textarea id="news-text" placeholder="Escribe tu noticia aquí..." required></textarea>
+            <button type="submit" class="cta-btn">Publicar noticia</button>
+        </form>
     </section>
 
     <section id="servicios" class="section">
@@ -47,34 +60,10 @@
         </div>
     </section>
 
-    <section id="por-que" class="section">
-        <h2>🔑 ¿Por qué elegirnos?</h2>
-        <ul>
-            <li>Páginas web optimizadas para la seguridad.</li>
-            <li>Diseño responsive, se ve bien en cualquier dispositivo.</li>
-            <li>¡Entrega rápida! 🚀</li>
-        </ul>
-    </section>
-
-    <section id="precios" class="section">
-        <h2>💰 Precios</h2>
-        <p>Para una página básica con tu información y fotos, el precio inicial es de [150-200]. ¡Contáctanos para más detalles!</p>
-    </section>
-
-    <section id="contacto" class="section">
-        <h2>📝 ¿Listo para crear tu página web?</h2>
-        <form action="mailto:samuelromerocloud18@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-            <button type="submit" class="cta-btn">Enviar mensaje</button>
-        </form>
-        <a href="https://wa.me/34641188232" target="_blank" class="whatsapp-btn">Contáctame por WhatsApp</a>
-    </section>
-
     <footer>
         <p>&copy; 2025-26 S.RTech. Todos los derechos reservados por SecureDesigns S.RTech.</p>
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
