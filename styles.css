@@ -90,127 +90,60 @@ header nav ul li a:hover {
     background: #4682b4; /* Azul más oscuro */
 }
 
-/* Sección de servicios */
-.section {
+/* Estilos para las noticias */
+#noticias {
     padding: 50px 20px;
-    text-align: center;
+    background: #fff;
+    border-top: 3px solid #1e90ff;
 }
 
-.servicios-container {
-    display: flex;
-    justify-content: space-around;
+#news-container {
     margin-top: 20px;
 }
 
-.servicio {
-    width: 30%;
-    background: #fff;
-    padding: 20px;
+.news-item {
+    background: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.servicio:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.servicio h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.servicio p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Sección de noticias */
-#noticias {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-}
-
-.noticia {
-    background: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.noticia h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
 }
 
 .like-btn {
-    background-color: #1e90ff;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.like-btn:hover {
+    background: #4682b4;
+}
+
+/* Estilos del footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366; /* Verde WhatsApp */
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
     font-size: 16px;
-    cursor: pointer;
-    border: none;
-    margin-top: 10px;
+    text-decoration: none;
+    margin-top: 20px;
     transition: background-color 0.3s ease;
 }
 
-.like-btn:hover {
-    background-color: #4682b4;
-}
-
-/* Sección de contacto */
-#contacto {
-    padding: 50px 20px;
-    background-color: #fff;
-}
-
-#contacto form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-#contacto input, #contacto textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-}
-
-#contacto button {
-    background-color: #1e90ff;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-#contacto button:hover {
-    background-color: #4682b4;
-}
-
-.whatsapp-btn {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    color: #25D366;
-    font-size: 1.5rem;
-}
-
-/* Estilo flotante de botón de WhatsApp */
 .whatsapp-btn:hover {
-    color: #128C7E;
-}
-
-/* Footer */
-footer {
-    background-color: #1e90ff;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #128C7E; /* Verde más oscuro de WhatsApp */
 }
