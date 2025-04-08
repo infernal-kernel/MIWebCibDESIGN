@@ -8,43 +8,37 @@
 body {
     font-family: 'Arial', sans-serif;
     background: #f7f7f7;
-    color: #000; /* Texto global negro */
+    color: #000;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Estilos de la cabecera */
-header {
-    background: #1e90ff; /* Azul claro */
-    color: #fff;  /* Texto blanco en el header */
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .servicios-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicio {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .cta-btn {
+        padding: 12px 25px;
+    }
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #000;  /* Hover en negro */
-}
-
-/* Estilo de la sección hero */
+/* Imagen de fondo */
 #inicio {
     background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
     height: 100vh;
@@ -56,94 +50,30 @@ header nav ul li a:hover {
     position: relative;
 }
 
-.hero-text {
-    z-index: 10;
-    color: #000;  /* Texto en negro */
-}
-
-.hero-text h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #000;  /* Título en negro */
-}
-
-.hero-text p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: #000;  /* Párrafo en negro */
-}
-
-.cta-btn {
-    background: #1e90ff; /* Azul claro */
-    color: #fff;
-    padding: 15px 30px;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-    background: #4682b4; /* Azul más oscuro */
-}
-
-/* Sección de servicios */
-.section {
+/* Sección de noticias */
+#noticias {
     padding: 50px 20px;
     text-align: center;
+    background: #fff;
 }
 
-.servicios-container {
-    display: flex;
-    justify-content: space-around;
+#news-container {
     margin-top: 20px;
 }
 
-.servicio {
-    width: 30%;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.servicio:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.servicio h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.servicio p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Sección de contacto */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-form input, form textarea {
+#news-form textarea {
     width: 80%;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    margin-bottom: 20px;
+    height: 150px;
+    resize: none;
 }
 
-form button {
-    background: #1e90ff; /* Azul claro */
+#news-form button {
+    background: #1e90ff;
     color: #fff;
     padding: 15px 30px;
     font-size: 1rem;
@@ -153,31 +83,21 @@ form button {
     transition: background 0.3s ease;
 }
 
-form button:hover {
-    background: #4682b4; /* Azul más oscuro */
+#news-form button:hover {
+    background: #4682b4;
 }
 
-/* Estilos del footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Estilos para el botón de WhatsApp */
-.whatsapp-btn {
-    display: inline-block;
-    background-color: #25D366; /* Verde WhatsApp */
+/* Botón de like en las noticias */
+.like-btn {
+    background-color: #4CAF50; /* Verde */
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
     font-size: 16px;
     text-decoration: none;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.whatsapp-btn:hover {
-    background-color: #128C7E; /* Verde más oscuro de WhatsApp */
+.like-btn:hover {
+    background-color: #45a049; /* Verde oscuro */
 }
