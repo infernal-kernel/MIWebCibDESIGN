@@ -1,30 +1,16 @@
-/* Resetear márgenes y paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: #f7f7f7;
-    color: #000;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
+/* Estilos para dispositivos pequeños */
+@media screen and (max-width: 768px) {
     .servicios-container {
-        flex-direction: column;
+        flex-direction: column; /* Acomodar los servicios en columna en pantallas pequeñas */
         align-items: center;
     }
 
     .servicio {
-        width: 80%;
-        margin: 20px 0;
+        width: 80%; /* Ajustar el tamaño de los servicios en pantallas pequeñas */
+        margin-bottom: 20px; /* Espaciado entre los servicios */
     }
 
+    /* Ajustar tamaño de la fuente en pantallas pequeñas */
     .hero-text h2 {
         font-size: 2rem;
     }
@@ -32,72 +18,10 @@ body {
     .hero-text p {
         font-size: 1.2rem;
     }
-
-    .cta-btn {
-        padding: 12px 25px;
-    }
 }
 
-/* Imagen de fondo */
-#inicio {
-    background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    position: relative;
-}
-
-/* Sección de noticias */
-#noticias {
-    padding: 50px 20px;
-    text-align: center;
-    background: #fff;
-}
-
-#news-container {
-    margin-top: 20px;
-}
-
-#news-form textarea {
-    width: 80%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    height: 150px;
-    resize: none;
-}
-
-#news-form button {
-    background: #1e90ff;
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-#news-form button:hover {
-    background: #4682b4;
-}
-
-/* Botón de like en las noticias */
-.like-btn {
-    background-color: #4CAF50; /* Verde */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.like-btn:hover {
-    background-color: #45a049; /* Verde oscuro */
+/* Añadir imagen de fondo en todo el sitio */
+body {
+    background: url('ruta/a/tu/imagen-de-fondo.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ajusta la imagen de fondo */
 }
