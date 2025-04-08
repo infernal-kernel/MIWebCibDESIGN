@@ -1,42 +1,216 @@
-/* Estilos de la sección de noticias */
-#noticias {
-    background: #fff;
-    padding: 30px 20px;
-    margin-top: 40px;
+/* Resetear márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#news-container {
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f7f7f7;
+    color: #000; /* Texto global negro */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Estilos de la cabecera */
+header {
+    background: #1e90ff; /* Azul claro */
+    color: #fff;  /* Texto blanco en el header */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
 }
 
-.news-item {
-    background: #f1f1f1;
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #000;  /* Hover en negro */
+}
+
+/* Estilo de la sección hero */
+#inicio {
+    background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hero-text {
+    z-index: 10;
+    color: #000;  /* Texto en negro */
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;  /* Título en negro */
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #000;  /* Párrafo en negro */
+}
+
+.cta-btn {
+    background: #1e90ff; /* Azul claro */
+    color: #fff;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #4682b4; /* Azul más oscuro */
+}
+
+/* Sección de servicios */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.servicios-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.servicio {
+    width: 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.servicio h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Sección de noticias */
+#noticias {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.noticia {
+    background: #fff;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.news-item h3 {
+.noticia h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
-.news-item p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
 .like-btn {
-    background: #1e90ff;
-    color: #fff;
+    background-color: #1e90ff;
+    color: white;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-size: 16px;
     cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .like-btn:hover {
-    background: #4682b4;
+    background-color: #4682b4;
+}
+
+/* Sección de contacto */
+#contacto {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contacto input, #contacto textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#contacto button {
+    background-color: #1e90ff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#contacto button:hover {
+    background-color: #4682b4;
+}
+
+.whatsapp-btn {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #25D366;
+    font-size: 1.5rem;
+}
+
+/* Estilo flotante de botón de WhatsApp */
+.whatsapp-btn:hover {
+    color: #128C7E;
+}
+
+/* Footer */
+footer {
+    background-color: #1e90ff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
