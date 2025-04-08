@@ -6,6 +6,7 @@
     <meta name="description" content="Creación de páginas web rápidas, seguras y profesionales.">
     <title>¡Crea tu Página Web! | SecureDesigns S.RTech</title>
     <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que el archivo 'styles.css' esté en la misma carpeta -->
+    <script src="like-button.js" defer></script> <!-- Enlace al archivo JavaScript -->
 </head>
 <body>
     <header>
@@ -17,7 +18,6 @@
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#por-que">¿Por qué elegirnos?</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#noticias">Noticias</a></li>
             </ul>
         </nav>
     </header>
@@ -62,6 +62,21 @@
         <p>Para una página básica con tu información y fotos, el precio inicial es de [150-200]. ¡Contáctanos para más detalles!</p>
     </section>
 
+    <section id="noticias" class="section">
+        <h2>📰 Noticias</h2>
+        <!-- Aquí van las noticias con botones de "Me gusta" -->
+        <div class="noticia">
+            <h3>¡Nuevo servicio disponible!</h3>
+            <p>Estamos emocionados de anunciar un nuevo servicio que te ayudará a crear tu página web aún más rápido.</p>
+            <button class="like-btn">Me gusta 0 👍</button>
+        </div>
+        <div class="noticia">
+            <h3>Mejoras en el sitio web</h3>
+            <p>Hemos realizado importantes mejoras para ofrecerte una mejor experiencia de usuario en nuestro sitio web.</p>
+            <button class="like-btn">Me gusta 0 👍</button>
+        </div>
+    </section>
+
     <section id="contacto" class="section">
         <h2>📝 ¿Listo para crear tu página web?</h2>
         <form action="mailto:samuelromerocloud18@gmail.com" method="post" enctype="text/plain">
@@ -73,30 +88,9 @@
         <a href="https://wa.me/34641188232" target="_blank" class="whatsapp-btn">Contáctame por WhatsApp</a>
     </section>
 
-    <!-- Sección de noticias -->
-    <section id="noticias" class="section">
-        <h2>📰 Noticias</h2>
-        <div id="news-container">
-            <div class="news-item">
-                <h3>Título de la noticia</h3>
-                <p>Contenido de la noticia...</p>
-                <button class="like-btn">Me gusta 👍</button>
-            </div>
-            <!-- Agregar más noticias aquí -->
-        </div>
-    </section>
-
     <footer>
         <p>&copy; 2025-26 S.RTech. Todos los derechos reservados por SecureDesigns S.RTech.</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('.like-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                let currentLikes = parseInt(this.textContent.split(' ')[1]) || 0;
-                this.textContent = `Me gusta ${currentLikes + 1} 👍`;
-            });
-        });
-    </script>
 </body>
 </html>
