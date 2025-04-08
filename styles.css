@@ -1,27 +1,42 @@
-/* Estilos para dispositivos pequeños */
-@media screen and (max-width: 768px) {
-    .servicios-container {
-        flex-direction: column; /* Acomodar los servicios en columna en pantallas pequeñas */
-        align-items: center;
-    }
-
-    .servicio {
-        width: 80%; /* Ajustar el tamaño de los servicios en pantallas pequeñas */
-        margin-bottom: 20px; /* Espaciado entre los servicios */
-    }
-
-    /* Ajustar tamaño de la fuente en pantallas pequeñas */
-    .hero-text h2 {
-        font-size: 2rem;
-    }
-
-    .hero-text p {
-        font-size: 1.2rem;
-    }
+/* Estilos de la sección de noticias */
+#noticias {
+    background: #fff;
+    padding: 30px 20px;
+    margin-top: 40px;
 }
 
-/* Añadir imagen de fondo en todo el sitio */
-body {
-    background: url('ruta/a/tu/imagen-de-fondo.jpg') no-repeat center center fixed;
-    background-size: cover; /* Ajusta la imagen de fondo */
+#news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-item {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.like-btn {
+    background: #1e90ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.like-btn:hover {
+    background: #4682b4;
 }
