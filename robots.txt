@@ -1,34 +1,59 @@
 # Robots.txt para SecureDesigns S.RTech
 
-# Permitir que todos los bots rastreen el sitio (esto es útil si no quieres restringir el acceso)
+# Bloquear el acceso a todos los robots por defecto
 User-agent: *
-Disallow: /private/        # No permitir acceso a la carpeta /private/
-Disallow: /admin/          # No permitir acceso a la carpeta de administración
-Disallow: /login/          # No permitir acceso al formulario de login
-Disallow: /checkout/       # No permitir acceso a la página de pago
+Disallow: /
 
-# Permitir que los bots rastreen todas las páginas del sitio
-Allow: /
-
-# Deshabilitar rastreo de ciertos recursos
-Disallow: /images/         # No rastrear imágenes (si no son relevantes para SEO)
-Disallow: /scripts/        # No rastrear scripts de backend o JS innecesarios
-Disallow: /styles/         # No rastrear archivos de estilos innecesarios
-
-# Excluir ciertas páginas de la indexación
-Disallow: /thank-you-page/ # Página de agradecimiento, no es necesario indexarla
-
-# Asegurar que las páginas de búsqueda interna no se indexen
-Disallow: /search
-
-# Permitir que Googlebot pueda rastrear todo, pero excluye algunas páginas
+# Permitir a Googlebot y Bingbot el rastreo de solo ciertas páginas
 User-agent: Googlebot
-Disallow: /no-google/
+Allow: /pagina-publica/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /config/
+Disallow: /scripts/
 
-# Incluir el archivo Sitemap (para ayudar a los motores de búsqueda a encontrar todas las URLs de tu sitio)
+User-agent: Bingbot
+Allow: /pagina-publica/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /config/
+Disallow: /scripts/
+
+# Proteger contenido sensible e información personal
+Disallow: /user-data/
+Disallow: /profiles/
+Disallow: /settings/
+Disallow: /cart/
+Disallow: /orders/
+Disallow: /payment/
+
+# Bloquear el rastreo de archivos de configuración
+Disallow: /config/
+Disallow: /db/
+Disallow: /tmp/
+Disallow: /log/
+
+# Excluir ciertos tipos de archivos de la indexación
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Deshabilitar rastreo de formularios internos
+Disallow: /formulario/
+
+# No permitir que los motores de búsqueda rastreen las páginas de resultados de búsqueda interna
+Disallow: /search/
+
+# Bloquear bots de redes sociales que pueden indexar contenido que no debería ser público
+User-agent: Twitterbot
+Disallow: /
+
+User-agent: FacebookExternalHit
+Disallow: /
+
+# Incluir el archivo Sitemap
 Sitemap: https://infernal-kernel.github.io/MIWebCibDESIGN/sitemap.xml
-
-# Informar sobre las políticas de privacidad y contenido
-# No indexar ciertas áreas de tu sitio, si así lo prefieres
-Disallow: /privacy-policy/
-Disallow: /terms-of-service/
