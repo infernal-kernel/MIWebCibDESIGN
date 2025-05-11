@@ -126,7 +126,7 @@ header nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Resaltado en hover y toque */
+/* Resaltado en hover, touch y click */
 .servicio:hover, .servicio:active, .servicio:focus {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -240,5 +240,12 @@ footer {
     /* Ajustar el botón de WhatsApp */
     .whatsapp-btn {
         font-size: 14px;
+    }
+
+    /* Mejorar el resaltado para móviles */
+    .servicio:hover, .servicio:focus, .servicio:active {
+        transform: none; /* Remueve la animación en dispositivos táctiles */
+        background-color: #f4f4f4; /* Mantenemos el resaltado */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Aumentamos la sombra */
     }
 }
