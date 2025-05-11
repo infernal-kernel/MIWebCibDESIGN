@@ -98,20 +98,11 @@ header nav ul li a:hover {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-/* Resaltado de los botones en escritorio */
 .cta-btn:hover {
     background: #4682b4; /* Azul más oscuro */
-    transform: translateY(-5px); /* Hace que el botón se desplace un poco hacia arriba */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añadir sombra */
-}
-
-.cta-btn:active {
-    background: #5a8bc2; /* Azul más claro */
-    transform: scale(0.98); /* Reducción del tamaño cuando se hace clic */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Reducir sombra al hacer clic */
 }
 
 /* Sección de servicios */
@@ -136,7 +127,7 @@ header nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Resaltado en hover, touch y click para los bloques de servicios */
+/* Resaltado en hover, touch y click */
 .servicio:hover, .servicio:active, .servicio:focus {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -178,19 +169,11 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 form button:hover {
     background: #4682b4; /* Azul más oscuro */
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-form button:active {
-    background: #5a8bc2; /* Azul más claro */
-    transform: scale(0.98);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos del footer */
@@ -258,6 +241,14 @@ footer {
     /* Ajustar el botón de WhatsApp */
     .whatsapp-btn {
         font-size: 14px;
+    }
+
+    /* Asegurarse de que el fondo se vea correctamente en móviles */
+    body {
+        background: linear-gradient(45deg, #1e90ff, #ff1493); /* Fondo dinámico con gradiente */
+        background-size: 400% 400%; /* Para dar un efecto de movimiento */
+        animation: gradientMove 10s ease infinite; /* Animación para mover el gradiente */
+        height: 100vh; /* Aseguramos que cubra toda la pantalla */
     }
 
     /* Mejorar el resaltado para móviles */
