@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Creación de páginas web rápidas, seguras y profesionales.">
+
+    <!-- Seguridad básica -->
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
-    <title>¡Crea tu Página Web! | SecureDesigns S.RTech</title>
+
+    <title>SecureDesigns S.RTech | Webs Futuristas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>SecureDesigns S.RTech</h1>
-            </div>
-            <ul>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Secure<span>Designs</span> S.RTech</div>
+            <ul class="nav-links">
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#por-que">¿Por qué elegirnos?</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -25,53 +26,53 @@
         </nav>
     </header>
 
-    <section id="inicio">
-        <div class="hero-text">
+    <section class="hero" id="inicio">
+        <div class="hero-content">
             <h2>🚀 ¡Lanzamos un nuevo servicio! 🚀</h2>
-            <p>¿Necesitas una página web rápida, segura y profesional? 💻🔐 ¡Estás en el lugar correcto!</p>
-            <a href="#contacto" class="cta-btn">¡Empecemos ahora!</a>
+            <p>¿Necesitas una página web moderna, segura y profesional? 💻🔐 ¡Estás en el lugar correcto!</p>
+            <a href="#contacto" class="btn-primary">¡Empecemos ahora!</a>
         </div>
     </section>
 
-    <section id="servicios" class="section">
+    <section class="section dark-section" id="servicios">
         <h2>🔧 ¿Cómo funciona?</h2>
-        <div class="servicios-container">
-            <div class="servicio">
+        <div class="cards">
+            <div class="card">
                 <h3>Diseño rápido</h3>
                 <p>Envíanos las fotos y la información que quieres incluir, nosotros nos encargamos del diseño.</p>
             </div>
-            <div class="servicio">
+            <div class="card">
                 <h3>Seguridad</h3>
                 <p>Protegemos tu web con las mejores prácticas para garantizar tu tranquilidad.</p>
             </div>
-            <div class="servicio">
+            <div class="card">
                 <h3>Costo accesible</h3>
                 <p>Precios claros, sin sorpresas. Lo que necesitas sin complicaciones.</p>
             </div>
         </div>
     </section>
 
-    <section id="por-que" class="section">
+    <section class="section" id="por-que">
         <h2>🔑 ¿Por qué elegirnos?</h2>
-        <ul>
+        <ul class="bullet-list">
             <li>Páginas web optimizadas para la seguridad.</li>
             <li>Diseño responsive, se ve bien en cualquier dispositivo.</li>
             <li>¡Entrega rápida! 🚀</li>
         </ul>
     </section>
 
-    <section id="precios" class="section">
+    <section class="section dark-section" id="precios">
         <h2>💰 Precios</h2>
-        <p>Para una página básica con tu información y fotos, el precio inicial es de [150-200]. ¡Contáctanos para más detalles!</p>
+        <p>Para una página básica con tu información y fotos, el precio inicial es de <strong>[150-200]</strong>. ¡Contáctanos para más detalles!</p>
     </section>
 
-    <section id="contacto" class="section">
+    <section class="section" id="contacto">
         <h2>📝 ¿Listo para crear tu página web?</h2>
         <form action="mailto:samuelromerocloud18@gmail.com" method="post" enctype="text/plain">
             <input type="text" name="nombre" placeholder="Tu nombre" required>
             <input type="email" name="email" placeholder="Tu correo" required>
             <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-            <button type="submit" class="cta-btn">Enviar mensaje</button>
+            <button type="submit">Enviar mensaje</button>
         </form>
         <a href="https://wa.me/34641188232" target="_blank" class="whatsapp-btn">Contáctame por WhatsApp</a>
     </section>
