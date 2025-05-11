@@ -5,28 +5,53 @@
     box-sizing: border-box;
 }
 
-/* Estilo global del body */
+/* General */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, #1e90ff, #ff1493); /* Fondo dinámico con gradiente */
-    background-size: 400% 400%; /* Para dar un efecto de movimiento */
-    animation: gradientMove 10s ease infinite; /* Animación para mover el gradiente */
+    background: #000; /* Fondo negro para asegurar contraste */
     color: #000; /* Texto global negro */
     line-height: 1.6;
     overflow-x: hidden;
-    height: 100vh; /* Aseguramos que cubra toda la pantalla */
+    position: relative;
 }
 
-/* Estilo de la cabecera */
+/* Fondo animado */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #FF4D00, #FF9A00);
+    }
+    50% {
+        background: linear-gradient(135deg, #FF9A00, #FF4D00);
+    }
+    100% {
+        background: linear-gradient(135deg, #FF4D00, #FF9A00);
+    }
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FF4D00, #FF9A00);
+    animation: gradientAnimation 10s infinite alternate;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+/* Estilos de la cabecera */
 header {
-    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
-    color: #fff; /* Texto blanco en el header */
+    background: rgba(30, 144, 255, 0.9); /* Azul translúcido */
+    color: #fff;
     padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* Menú de navegación */
 header nav ul {
     list-style: none;
     display: flex;
@@ -45,25 +70,12 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #000;  /* Hover en negro */
-}
-
-/* Efecto de gradiente de fondo */
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    color: #000;
 }
 
 /* Estilo de la sección hero */
 #inicio {
-    background: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -73,44 +85,32 @@ header nav ul li a:hover {
     position: relative;
 }
 
-.hero-text {
-    z-index: 10;
-    color: #000;
-}
-
-.hero-text h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.hero-text p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-
-.cta-btn {
-    background: #1e90ff; /* Azul claro */
+/* Estilo de botones con resaltado */
+.cta-btn, .servicio {
+    background-color: #1e90ff;
     color: #fff;
     padding: 15px 30px;
-    text-transform: uppercase;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cta-btn:hover {
-    background: #4682b4; /* Azul más oscuro */
+/* Hover y toque en botones */
+.cta-btn:hover, .servicio:hover {
+    background-color: #4682b4; /* Azul más oscuro */
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:active, .servicio:active {
+    background-color: #5a8bc2; /* Azul más claro cuando se toca */
+    transform: scale(0.98); /* Reducir tamaño al tocar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Sección de servicios */
-.section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
 .servicios-container {
     display: flex;
     justify-content: space-around;
@@ -123,138 +123,34 @@ header nav ul li a:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Resaltado en hover, touch y click */
-.servicio:hover, .servicio:active, .servicio:focus {
+.servicio:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    background-color: #f4f4f4;
 }
 
-/* Para dispositivos táctiles */
-@media (hover: none) and (pointer: coarse) {
-    .servicio {
-        background-color: #f4f4f4; /* Resaltado inicial */
-    }
-
-    .servicio:active {
-        background-color: #e0e0e0; /* Cambio al hacer clic */
-    }
+.servicio h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
-/* Sección de contacto */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-form input, form textarea {
-    width: 80%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.servicio p {
     font-size: 1rem;
+    color: #555;
 }
 
-form button {
-    background: #1e90ff; /* Azul claro */
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-form button:hover {
-    background: #4682b4; /* Azul más oscuro */
-}
-
-/* Estilos del footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Estilos para el botón de WhatsApp */
-.whatsapp-btn {
-    display: inline-block;
-    background-color: #25D366; /* Verde WhatsApp */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.whatsapp-btn:hover {
-    background-color: #128C7E; /* Verde más oscuro de WhatsApp */
-}
-
-/* Media Query para móviles */
+/* Media Queries */
 @media only screen and (max-width: 768px) {
-    /* Ajustar texto en el header */
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
+    /* Ajuste en los botones para móviles */
+    .cta-btn, .servicio {
+        padding: 12px 25px;
+        font-size: 0.9rem;
     }
 
-    header nav ul li {
-        margin: 10px 0;
-    }
-
-    /* Ajustar la sección Hero */
-    #inicio .hero-text h2 {
-        font-size: 2rem;
-    }
-
-    #inicio .hero-text p {
-        font-size: 1.2rem;
-    }
-
-    /* Ajustar la sección de Servicios */
-    .servicios-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .servicio {
-        width: 80%; /* Reducir el tamaño de los bloques */
-        margin-bottom: 20px; /* Separar los servicios */
-    }
-
-    /* Ajuste en el formulario de contacto */
-    form input, form textarea {
-        width: 90%;
-    }
-
-    /* Ajustar el botón de WhatsApp */
-    .whatsapp-btn {
-        font-size: 14px;
-    }
-
-    /* Asegurarse de que el fondo se vea correctamente en móviles */
-    body {
-        background: linear-gradient(45deg, #1e90ff, #ff1493); /* Fondo dinámico con gradiente */
-        background-size: 400% 400%; /* Para dar un efecto de movimiento */
-        animation: gradientMove 10s ease infinite; /* Animación para mover el gradiente */
-        height: 100vh; /* Aseguramos que cubra toda la pantalla */
-    }
-
-    /* Mejorar el resaltado para móviles */
-    .servicio:hover, .servicio:focus, .servicio:active {
-        transform: none; /* Remueve la animación en dispositivos táctiles */
-        background-color: #f4f4f4; /* Mantenemos el resaltado */
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Aumentamos la sombra */
+    /* Asegurar que el botón esté bien resaltado en móviles */
+    .cta-btn:active, .servicio:active {
+        background-color: #5a8bc2;
     }
 }
