@@ -14,6 +14,7 @@ body {
     color: #000; /* Texto global negro */
     line-height: 1.6;
     overflow-x: hidden;
+    height: 100vh; /* Aseguramos que cubra toda la pantalla */
 }
 
 /* Estilo de la cabecera */
@@ -240,6 +241,14 @@ footer {
     /* Ajustar el botón de WhatsApp */
     .whatsapp-btn {
         font-size: 14px;
+    }
+
+    /* Asegurarse de que el fondo se vea correctamente en móviles */
+    body {
+        background: linear-gradient(45deg, #1e90ff, #ff1493); /* Fondo dinámico con gradiente */
+        background-size: 400% 400%; /* Para dar un efecto de movimiento */
+        animation: gradientMove 10s ease infinite; /* Animación para mover el gradiente */
+        height: 100vh; /* Aseguramos que cubra toda la pantalla */
     }
 
     /* Mejorar el resaltado para móviles */
