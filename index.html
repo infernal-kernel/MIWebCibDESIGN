@@ -1,84 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Creación de páginas web rápidas, seguras y profesionales.">
+  <!-- ===== Metadatos esenciales y SEO ===== -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SecureDesigns S.RTech: Creación de páginas web rápidas, seguras y profesionales con diseños futuristas y tecnología de vanguardia.">
+  <meta name="keywords" content="diseño web, seguridad web, sitios responsivos, desarrollo profesional, SecureDesigns, S.RTech">
+  <meta name="author" content="SecureDesigns S.RTech">
 
-    <!-- Seguridad básica -->
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta name="referrer" content="no-referrer">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+  <!-- ===== Open Graph / Twitter Card para redes sociales ===== -->
+  <meta property="og:title" content="SecureDesigns S.RTech | Webs Futuristas">
+  <meta property="og:description" content="Transformamos tu presencia online con sitios web rápidos, seguros y profesionales.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://tudominio.com/">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <title>SecureDesigns S.RTech | Webs Futuristas</title>
-    <link rel="stylesheet" href="styles.css">
+  <!-- ===== Seguridad básica y CSP mejorado ===== -->
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src 'self' data:;
+    connect-src 'self';
+    frame-ancestors 'none';
+  ">
+
+  <!-- ===== Título y Favicon ===== -->
+  <title>SecureDesigns S.RTech | Webs Futuristas</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- ===== Google Fonts ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ===== Hoja de estilos principal ===== -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ===== Scripts que no bloquean renderizado (defer) ===== -->
+  <script src="scripts.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">Secure<span>Designs</span> S.RTech</div>
-            <ul class="nav-links">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#por-que">¿Por qué elegirnos?</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- ===== Menú de navegación (responsive) ===== -->
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#inicio" class="logo">Secure<span>Designs</span> S.RTech</a>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        &#9776;
+      </button>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#por-que">¿Por qué elegirnos?</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h2>🚀 ¡Lanzamos un nuevo servicio! 🚀</h2>
-            <p>¿Necesitas una página web moderna, segura y profesional? 💻🔐 ¡Estás en el lugar correcto!</p>
-            <a href="#contacto" class="btn-primary">¡Empecemos ahora!</a>
+  <!-- ===== Sección Hero ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero-content container">
+      <h1>🚀 ¡Llevamos tu web al futuro! 🚀</h1>
+      <p>Diseños ultrarrápidos, seguros y con esa estética futurista que tu proyecto merece.</p>
+      <a href="#contacto" class="btn-primary">¡Empecemos ahora!</a>
+    </div>
+  </section>
+
+  <!-- ===== Sección “¿Cómo funciona?” / Servicios ===== -->
+  <section class="section dark-section" id="servicios">
+    <div class="container">
+      <h2>🔧 ¿Cómo trabajamos?</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>1. Recogemos tu visión</h3>
+          <p>Nos envías fotos, textos e ideas; nuestro equipo analiza tus necesidades al detalle.</p>
+        </article>
+        <article class="card">
+          <h3>2. Diseño vanguardista</h3>
+          <p>Creamos prototipos en tiempo récord, con interfaces limpias, fluidas y adaptadas a todos los dispositivos.</p>
+        </article>
+        <article class="card">
+          <h3>3. Seguridad reforzada</h3>
+          <p>Implementamos HTTPS, Content-Security-Policy, pruebas de penetración y toda la stack más actualizada.</p>
+        </article>
+        <article class="card">
+          <h3>4. Entrega y soporte</h3>
+          <p>Publicamos tu sitio, te entregamos documentación y ofrecemos 30 días de soporte para ajustes y dudas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sección “¿Por qué elegirnos?” ===== -->
+  <section class="section" id="por-que">
+    <div class="container">
+      <h2>🔑 ¿Por qué elegir SecureDesigns?</h2>
+      <ul class="bullet-list">
+        <li>💨 <strong>Rendimiento extremo:</strong> Páginas optimizadas para cargar en menos de 1 s.</li>
+        <li>🔐 <strong>Seguridad de alto nivel:</strong> Auditorías, actualizaciones automáticas, WAF y SSL gratuito.</li>
+        <li>📱 <strong>Responsive sin concesiones:</strong> Tu sitio se verá impecable en móvil, tablet y escritorio.</li>
+        <li>💡 <strong>Soporte 24/7:</strong> Siempre disponibles para resolver cualquier imprevisto.</li>
+        <li>🏆 <strong>Experiencia certificada:</strong> Llevamos +50 proyectos realizados con éxito.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Sección “Precios” ===== -->
+  <section class="section dark-section" id="precios">
+    <div class="container">
+      <h2>💰 Nuestras tarifas</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Plan Básico</h3>
+          <p class="price">150€</p>
+          <ul>
+            <li>1–3 páginas HTML/CSS</li>
+            <li>Responsive básico</li>
+            <li>SSL y configuración inicial</li>
+          </ul>
         </div>
-    </section>
-
-    <section class="section dark-section" id="servicios">
-        <h2>🔧 ¿Cómo funciona?</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Diseño rápido</h3>
-                <p>Envíanos las fotos y la información que quieres incluir, nosotros nos encargamos del diseño.</p>
-            </div>
-            <div class="card">
-                <h3>Seguridad</h3>
-                <p>Protegemos tu web con las mejores prácticas para garantizar tu tranquilidad.</p>
-            </div>
-            <div class="card">
-                <h3>Costo accesible</h3>
-                <p>Precios claros, sin sorpresas. Lo que necesitas sin complicaciones.</p>
-            </div>
+        <div class="pricing-card featured">
+          <h3>Plan Profesional</h3>
+          <p class="price">250€</p>
+          <ul>
+            <li>5–7 páginas con JavaScript</li>
+            <li>Diseño personalizado y animaciones</li>
+            <li>Optimización SEO básica</li>
+            <li>Pruebas de seguridad iniciales</li>
+          </ul>
         </div>
-    </section>
+        <div class="pricing-card">
+          <h3>Plan Avanzado</h3>
+          <p class="price">400€</p>
+          <ul>
+            <li>Landing page + blog + eCommerce</li>
+            <li>Integración de CMS y bases de datos</li>
+            <li>Auditoría de seguridad completa</li>
+            <li>Soporte 30 días</li>
+          </ul>
+        </div>
+      </div>
+      <p class="pricing-note">*Precios sujetos a ajustes según alcance final del proyecto. Contáctanos para cotización detallada.</p>
+    </div>
+  </section>
 
-    <section class="section" id="por-que">
-        <h2>🔑 ¿Por qué elegirnos?</h2>
-        <ul class="bullet-list">
-            <li>Páginas web optimizadas para la seguridad.</li>
-            <li>Diseño responsive, se ve bien en cualquier dispositivo.</li>
-            <li>¡Entrega rápida! 🚀</li>
-        </ul>
-    </section>
+  <!-- ===== Sección “Contacto” ===== -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <h2>📝 ¿Listo para tu nueva web?</h2>
+      <form id="contact-form" action="mailto:samuelromerocloud18@gmail.com" method="post" enctype="text/plain" novalidate>
+        <div class="form-group">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono (opcional):</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+34 600 123 456">
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu proyecto..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-secondary">Enviar mensaje</button>
+      </form>
+      <div class="contact-links">
+        <a href="https://wa.me/34641188232" target="_blank" class="btn-whatsapp">
+          <img src="images/whatsapp-icon.svg" alt="WhatsApp" aria-hidden="true"> Contáctame por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <section class="section dark-section" id="precios">
-        <h2>💰 Precios</h2>
-        <p>Para una página básica con tu información y fotos, el precio inicial es de <strong>[150-200]</strong>. ¡Contáctanos para más detalles!</p>
-    </section>
-
-    <section class="section" id="contacto">
-        <h2>📝 ¿Listo para crear tu página web?</h2>
-        <form action="mailto:samuelromerocloud18@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-            <button type="submit">Enviar mensaje</button>
-        </form>
-        <a href="https://wa.me/34641188232" target="_blank" class="whatsapp-btn">Contáctame por WhatsApp</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2025-26 S.RTech. Todos los derechos reservados por SecureDesigns S.RTech.</p>
-    </footer>
+  <!-- ===== Footer sencillo ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 SecureDesigns S.RTech. Todos los derechos reservados.</p>
+      <nav class="footer-nav">
+        <a href="#inicio">Inicio</a> |
+        <a href="#servicios">Servicios</a> |
+        <a href="#por-que">¿Por qué?</a> |
+        <a href="#precios">Precios</a> |
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
