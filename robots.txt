@@ -1,3 +1,20 @@
-# Robots.txt para SecureDesigns S.RTech
+# robots.txt para SecureDesigns S.RTech
+# Bloqueamos todo lo que no sea contenido estático principal y permitimos el acceso a recursos críticos.
 User-agent: *
-Disallow:
+Disallow: /private/
+Disallow: /config/
+Disallow: /scripts/
+Disallow: /backup/
+# Si tienes páginas de prueba, bloquea sus directorios:
+# Disallow: /test/
+ 
+# Permitimos indexar CSS, JS e imágenes para que no afecte el renderizado:
+Allow: /styles.css
+Allow: /scripts.js
+Allow: /images/
+
+# Sitemap
+Sitemap: https://tudominio.com/sitemap.xml
+
+# Crawl-delay opcional (especialmente útil si tu servidor es pequeño)
+Crawl-delay: 5
